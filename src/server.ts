@@ -1,5 +1,4 @@
 import App from './app';
-import { config } from './config';
 import initializeMongoose from './datasource';
 import {ConfigService} from "./common/services/config.service";
 const configService = new ConfigService();

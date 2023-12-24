@@ -1,11 +1,9 @@
 import { ApiError } from "../helpers/apiError";
-import { Request, Response, Errback, NextFunction } from "express";
+import { Response, Errback} from "express";
 import {LoggerService} from "../services/logger.service";
 function exceptionsMiddleware(
     err: Errback | ApiError | Error,
-    req: Request,
     res: Response,
-    next: NextFunction
 ){
     if (err instanceof ApiError) {
         return res.status(err.status).send({message: err.message, errors: err.errors})
