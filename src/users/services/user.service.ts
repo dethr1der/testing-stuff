@@ -27,7 +27,7 @@ export class UserService {
         if (user) {
             this.loggerService.warn(`Trial to create user with existing email: ${userDto.email}`);
             throw ApiError.BadRequestException(
-                `User with username: "${userDto.email}" is already exist!`
+                `User with email: "${userDto.email}" is already exist!`
             );
         }
         const newUser = await this.userRepository.createOne(userDto);
