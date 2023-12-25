@@ -4,7 +4,9 @@
   "description": "Simple backend to look on ",
   "main": "server.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf dist && npx tsc",
+    "start": "node dist/server.js",
+    "start:dev": "nodemon src/server.ts"
   },
   "author": "Anatolii Kliuiev <gredilox@gmail.com>",
   "license": "UNLICENSED",
